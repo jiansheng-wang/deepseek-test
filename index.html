@@ -187,7 +187,7 @@
         try {
           // 发送请求到后端
           const linuxIp = "10.109.119.136"; // 替换为你的 Linux IP
-          const response = await fetch(`http://${linuxIp}:5001/api/chat`, {
+          const response = await fetch(`http://${linuxIp}:8888/`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
