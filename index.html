@@ -424,7 +424,7 @@
         try {
           // 向后端发送请求以启用或禁用联网搜索
           const response = await fetch(
-            `https://overview-midlands-level-wn.trycloudflare.com/search-toggle`,
+            `https://coupons-pull-zone-cooperation.trycloudflare.com/search-toggle`,
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -457,7 +457,7 @@
       async function fetchModels() {
         try {
           const response = await fetch(
-            `https://overview-midlands-level-wn.trycloudflare.com/models`
+            `https://coupons-pull-zone-cooperation.trycloudflare.com/models`
           );
           const models = await response.json();
 
@@ -472,7 +472,7 @@
 
           // 获取当前模型并选中
           const currentModelResponse = await fetch(
-            `https://overview-midlands-level-wn.trycloudflare.com/current-model`
+            `https://coupons-pull-zone-cooperation.trycloudflare.com/current-model`
           );
           const currentModel = await currentModelResponse.json();
           if (currentModel.model_id) {
@@ -492,7 +492,7 @@
 
         // 如果选择的是当前模型，则不执行切换
         const currentModelResponse = await fetch(
-          `https://overview-midlands-level-wn.trycloudflare.com/current-model`
+          `https://coupons-pull-zone-cooperation.trycloudflare.com/current-model`
         );
         const currentModel = await currentModelResponse.json();
         if (currentModel.model_id === selectedModel) {
@@ -504,7 +504,7 @@
           modelLoading.style.display = "block";
 
           const response = await fetch(
-            `https://overview-midlands-level-wn.trycloudflare.com/models/${selectedModel}`,
+            `https://coupons-pull-zone-cooperation.trycloudflare.com/models/${selectedModel}`,
             {
               method: "POST",
             }
@@ -628,8 +628,7 @@
         thinkingSection.style.display = "block";
 
         try {
-          const BACKEND_URL =
-            "overview-midlands-level-wn.trycloudflare.com";
+          const BACKEND_URL = "coupons-pull-zone-cooperation.trycloudflare.com";
           const response = await fetch(`https://${BACKEND_URL}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
